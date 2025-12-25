@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Specially For You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: #fff6dc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Floating dots */
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(#ffb6c1 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.3;
+    }
+
+    .container {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+    }
+
+    .top-text {
+        font-family: 'Pacifico', cursive;
+        color: #ff4d8d;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        color: #1f2937;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        background: #fffdf7;
+        width: 380px;
+        max-width: 95%;
+        border-radius: 28px;
+        padding: 25px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        position: relative;
+        animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+        background: #ff4d8d;
+        color: white;
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .note {
+        text-align: left;
+        font-family: 'Pacifico', cursive;
+        font-size: 1.1rem;
+        color: #374151;
+        line-height: 1.8;
+    }
+
+    .signature {
+        text-align: right;
+        font-family: 'Pacifico', cursive;
+        color: #ff4d8d;
+        font-size: 1.4rem;
+        margin-top: 25px;
+    }
+
+    .cat {
+        position: absolute;
+        right: -15px;
+        top: 90px;
+        width: 90px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    button {
+        margin-top: 25px;
+        width: 100%;
+        border: none;
+        padding: 15px;
+        border-radius: 30px;
+        background: #ff4d8d;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(255,77,141,0.4);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="top-text">Wrapped straight from my heart</div>
+    <h1>A Christmas Note 🎅💌</h1>
+
+    <div class="card">
+        <div class="badge">💝 Hi Aishhh</div>
+
+        <div class="note">
+            Hey Aishwarya,<br><br>
+            Christmas feels warmer because of you.<br>
+            You bring comfort, light, and calm into my world.
+        </div>
+
+        <div class="signature">Always yours</div>
+
+        <img class="cat" src="imagescat.jpg" alt="Cute Cat">
+
+        <button onclick="window.location.href='page5.html'">Continue ✨</button>
+
+    </div>
+</div>
+
+</body>
+</html>

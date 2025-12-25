@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specially For You - Songs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #f7f1f6, #eaf6ff);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Snowfall */
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .art img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .track-title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .track-sub {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    background: #ff6a6a;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff6a6a, #ff9f6e);
+  }
+
+  .time {
+    font-size: 12px;
+    color: #333;
+  }
+
+  .next-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .next {
+    background: #ff6a6a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  @media (max-width: 720px){
+    .card { grid-template-columns: 1fr; }
+    .art img { width: 100%; height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Specially For You</h1>
+  <p class="subtitle">A little cozy corner with winter feelings and warm songs</p>
+
+  <!-- Song 1 -->
+  <div class="card">
+    <div class="art">
+      <img src="image1.jpg" alt="Song 1">
+    </div>
+    <div class="meta">
+      <div class="track-title">Lokada sukavella</div>
+      <div class="track-sub">LIKE FAIRY LIGHTS FOR MY HEART</div>
+      <div class="controls">
+        <button class="btn" data-play>Play</button>
+        <button class="btn" data-pause>Pause</button>
+        <div class="time" data-time>0:00 / 0:00</div>
+      </div>
+      <div class="bar"><div class="fill" data-fill></div></div>
+      <audio data-audio src="songs/Lokadasukavella.mp3"></audio>
+    </div>
+  </div>
+
+  <!-- Song 2 -->
+  <div class="card">
+    <div class="art">
+      <img src="image2.jpg" alt="Song 2">
+    </div>
+    <div class="meta">
+      <div class="track-title">For a Reason</div>
+      <div class="track-sub">SOME PEOPLE FEEL LIKE HOME</div>
+      <div class="controls">
+        <button class="btn" data-play>Play</button>
+        <button class="btn" data-pause>Pause</button>
+        <div class="time" data-time>0:00 / 0:00</div>
+      </div>
+      <div class="bar"><div class="fill" data-fill></div></div>
+      <audio data-audio src="songs/ForAReason.mp3"></audio>
+    </div>
+  </div>
+
+  <!-- Song 3 -->
+  <div class="card">
+    <div class="art">
+      <img src="image3.jpg" alt="Song 3">
+    </div>
+    <div class="meta">
+      <div class="track-title">Dil ka Jo Haal hai</div>
+      <div class="track-sub">WINTER FEELINGS HIT DIFFERENT</div>
+      <div class="controls">
+        <button class="btn" data-play>Play</button>
+        <button class="btn" data-pause>Pause</button>
+        <div class="time" data-time>0:00 / 0:00</div>
+      </div>
+      <div class="bar"><div class="fill" data-fill></div></div>
+      <audio data-audio src="songs/DilKaJoHaalHai.mp3"></audio>
+    </div>
+  </div>
+
+  <div class="next-wrap">
+    <button class="next">Next 🎄</button>
+  </div>
+</div>
+
+<script>
+  // Snowfall
+  for(let i=0;i<60;i++){
+    let snow = document.createElement('div');
+    snow.classList.add('snowflake');
+    snow.style.left = Math.random()*100+'vw';
+    snow.style.fontSize = (Math.random()*10+10)+'px';
+    snow.style.animationDuration = (Math.random()*5+5)+'s';
+    snow.textContent = '❄';
+    document.body.appendChild(snow);
+  }
+
+  // Audio functionality
+  document.querySelectorAll('.card').forEach(card=>{
+    const audio = card.querySelector('audio');
+    const play = card.querySelector('[data-play]');
+    const pause = card.querySelector('[data-pause]');
+    const timeEl = card.querySelector('[data-time]');
+    const fill = card.querySelector('[data-fill]');
+
+    const formatTime = secs=>{
+      const m = Math.floor(secs/60);
+      const s = Math.floor(secs%60);
+      return `${m}:${s.toString().padStart(2,'0')}`;
+    }
+
+    audio.addEventListener('loadedmetadata', ()=>{
+      timeEl.textContent = `0:00 / ${formatTime(audio.duration)}`;
+    });
+
+    audio.addEventListener('timeupdate', ()=>{
+      const pct = (audio.currentTime/audio.duration)*100;
+      fill.style.width = `${pct}%`;
+      timeEl.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    });
+
+    play.addEventListener('click', ()=> audio.play());
+    pause.addEventListener('click', ()=> audio.pause());
+  });
+
+  document.querySelector('.next').addEventListener('click', ()=>{
+    alert('Next page coming soon 🎄');
+  });
+</script>
+
+</body>
+</html>
